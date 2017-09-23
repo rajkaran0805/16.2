@@ -1,0 +1,46 @@
+
+ans 1  #Function to find the sum of cubes of n natural numbers
+cubes=function(n)
+{
+  n=readline(prompt = "Enter the natural number  :")
+  n=as.numeric(n)
+  s=0
+  while(n>0)
+  {
+    s=s+(n*n*n) 
+    n=n-1
+  }
+  return(c("The sum of cubes is",s))
+}
+
+cubes(n)  #Function to find the sum of cubes of n natural numbers
+
+=========================================================================
+ans 2 a)
+# Create the function.
+getmode <- function(x) {
+  uniqx <- unique(x)
+  uniqx[which.max(tabulate(match(x, uniqx)))]
+}
+
+# Create the vector with numbers.
+x <- c(2,3,3,4,4,5,6,7,9,10)
+
+# Calculate the mode using the user function.
+result <- getmode(x)
+print(result)
+
+===============================================================
+
+ans 2 b) NoOfPrimes=function(x)
+{
+  p=is_prime(x)
+  print(p)
+  print("The no. of primes in x is")
+  length(subset(p,p=='TRUE'))
+}
+
+install.packages("primes")
+library(primes)
+x=c(2,2,3,3,4,5,7,11,15,19,24,29)
+NoOfPrimes(x)
